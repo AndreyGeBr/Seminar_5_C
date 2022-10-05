@@ -4,8 +4,8 @@ Console.Clear();
 double[] array = CreateArray();
 FillArray(array);
 PrintArray(array);
-double result = FindMax(array) - FindMin(array);
-Console.WriteLine($"Разницу между максимальным и минимальным элементов массива равна {FindMax(array)} - {FindMin(array)} = {result}");
+double result = Math.Round(FindMax(array) - FindMin(array), 2);
+Console.Write($"разница между максимальным и минимальным элементами равна {FindMax(array)} - {FindMin(array)} = {result}");
 
 
 double[] CreateArray()
@@ -27,7 +27,7 @@ void FillArray(double[] arr)
 void PrintArray(double[] arr)
 {
     int count = arr.Length;
-    Console.Write("[");
+    Console.Write("В массиве : [");
     for (int i = 0; i < count; i++)
     {
         Console.Write(arr[i]);
@@ -36,7 +36,7 @@ void PrintArray(double[] arr)
         else
             Console.Write("  ");
     }
-    Console.WriteLine();
+    //Console.WriteLine();
 } 
 
 double FindMin(double[] arr)
