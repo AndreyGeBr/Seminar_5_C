@@ -54,3 +54,21 @@ int[] AddArray(int[] arr1, int[] arr2)
     }
     return result;
 }
+
+// решение от мирона
+int[] ConcatArray(int[] arr1, int[] arr2)
+{
+    int[] resultArray = new int[arr1.Length + arr2.Length];
+    int counter = 0;
+    for (int i = 0; i < arr1.Length; i++)
+    {
+        resultArray[counter] = arr1[i];
+        counter++;
+    }
+    for (int i = 0; i < arr2.Length; i++)
+    {
+        resultArray[counter] = arr2[i];
+        counter++;
+    }
+    return resultArray;
+}
