@@ -42,13 +42,13 @@ void PrintArray(int[] num)
 } 
 
 int[] AddArray(int[] arr1, int[] arr2)
-{
+{   
     int[] sum = new int[arr1.Length + arr2.Length];
-    for (int i = 0; i < arr1.Length; i++)
+    for (int i = 0; i < arr1.Length; i++) // записали в новый массив элементы первого массива
     {
        sum[i] = arr1[i]; 
     }
-     for (int i = arr1.Length; i < (arr1.Length + arr2.Length); i++)
+     for (int i = arr1.Length; i < (arr1.Length + arr2.Length); i++) // дописали в новый массив элементы второго массива
     {
        sum[i] = arr2[i - arr1.Length]; 
     }
